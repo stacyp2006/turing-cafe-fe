@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      reservations: [];
+      reservations: []
     }
   }
   componentDidMount() {
@@ -15,6 +15,7 @@ class App extends Component {
     .then(data => this.setState({reservations: data}))
     .catch(error => console.log('get error'))
   }
+
   render() {
     return (
       <div className="App">
@@ -22,6 +23,7 @@ class App extends Component {
         <div className='resy-form'>
         </div>
         <div className='resy-container'>
+          <ResContainer resList={this.state} />
         </div>
       </div>
     )
