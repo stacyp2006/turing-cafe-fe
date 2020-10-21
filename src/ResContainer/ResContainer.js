@@ -10,6 +10,8 @@ const ResContainer = (props) => {
     reservationCards = list.map(reservation => {
       return (
         <ResCard
+          id={reservation.id}
+          key={reservation.id}
           name={reservation.name}
           date={reservation.date}
           time={reservation.time}
