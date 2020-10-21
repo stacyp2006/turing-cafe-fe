@@ -5,8 +5,15 @@ class Form extends Component {
   constructor() {
     super();
     this.state = {
-
+      name: '',
+      date: '',
+      time: '',
+      number:
     }
+  }
+
+  updateValue = (event) => {
+    this.setState({[event.target.name]: event.target.value});
   }
 
   render() {
