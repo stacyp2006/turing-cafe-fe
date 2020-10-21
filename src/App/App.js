@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ResContainer from '../ResContainer/ResContainer.js';
+import Form from '../Form/Form.js';
 import { getReservations } from '../apiCalls.js';
 import './App.css';
 
