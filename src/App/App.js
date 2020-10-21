@@ -11,6 +11,11 @@ class App extends Component {
       reservations: []
     }
   }
+
+  submitRes = (newRes) => {
+    this.setState({ reservations: [...this.state.reservations, newRes] });
+  }
+
   componentDidMount() {
     getReservations()
     .then(data => this.setState({reservations: data}))
@@ -22,7 +27,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form />
+          <Form addRes={this.submitRes}/>
         </div>
         <div className='resy-container'>
           <ResContainer resList={this.state} />
